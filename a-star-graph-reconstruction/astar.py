@@ -40,10 +40,10 @@ def main(base_folder, dataset, min_graph_distance, max_straight_distance):
     viz_path = f'{base_folder}/viz_astar'
     
     dirs_to_create = [
-    f'{base_folder}/graph',
-    f'{base_folder}/mask',
-    f'{base_folder}/processed',
-    f'{base_folder}/viz_astar'
+        f'{base_folder}/graph',
+        f'{base_folder}/mask',
+        f'{base_folder}/processed',
+        f'{base_folder}/viz_astar'
     ]
 
     for directory in dirs_to_create:
