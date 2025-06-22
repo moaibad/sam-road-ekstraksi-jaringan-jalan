@@ -39,6 +39,15 @@ def main(base_folder, dataset, min_graph_distance, max_straight_distance):
     processed_path = f'{base_folder}/processed'
     viz_path = f'{base_folder}/viz_astar'
     
+    dirs_to_create = [
+    f'{base_folder}/graph',
+    f'{base_folder}/mask',
+    f'{base_folder}/processed',
+    f'{base_folder}/viz_astar'
+    ]
+
+    for directory in dirs_to_create:
+        os.makedirs(directory, exist_ok=True)
 
     filename = '/content/sam-road-ekstraksi-jaringan-jalan/input.png'
     
@@ -67,9 +76,6 @@ def main(base_folder, dataset, min_graph_distance, max_straight_distance):
     img = read_rgb_img(filename)
     viz_img = np.copy(img)
     img_size = viz_img.shape[0]
-
-    if not os.path.exists(viz_path):
-        os.makedirs(viz_path)
         
     if nodes is not None and len(nodes) > 0:
         if dataset == 'spacenet':
