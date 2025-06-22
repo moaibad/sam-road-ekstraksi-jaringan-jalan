@@ -92,7 +92,7 @@ if __name__ == "__main__":
 
     start_time = time.time()
     
-    main('save', 'cityscale', args.min_graph_distance, args.max_straight_distance)
+    main('/content/sam-road-ekstraksi-jaringan-jalan/save', 'cityscale', args.min_graph_distance, args.max_straight_distance)
 
     end_time = time.time()
     execution_time = end_time - start_time
