@@ -44,7 +44,7 @@ if uploaded_file is not None:
             command = [
                 sys.executable, "sam_road\inferencer.py",
                 "--config", 'sam_road\config\\toponet_vitb_512_cityscale.yaml',
-                "--checkpoint", 'sam_road\cityscale_vitb_512_e10.ckpt',
+                "--checkpoint", 'sam_road\checkpoint\cityscale_vitb_512_e10.ckpt',
                 "--gamma", gamma_value,
             ]
             result = subprocess.run(command, capture_output=True, text=True)

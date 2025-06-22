@@ -13,7 +13,7 @@ from viz import save
 from viz import restruct_graph
 
 import sys
-sys.path.append('D:\\Kuliah\\bismillah-yudis-1\\Tools\\ape\\sam_road')
+sys.path.append('/content/sam-road-ekstraksi-jaringan-jalan/sam_road')
 from dataset import read_rgb_img
 import triage
 
@@ -40,7 +40,7 @@ def main(base_folder, dataset, min_graph_distance, max_straight_distance):
     viz_path = f'{base_folder}/viz_astar'
     
 
-    filename='D:\Kuliah\\bismillah-yudis-1\Tools\\ape\input.png'
+    filename = '/content/sam-road-ekstraksi-jaringan-jalan/input.png'
     
     # A* Implementation
     outim = imageio.imread(os.path.join(mask_path, f"result_road.png")).astype('float32') / 255.0

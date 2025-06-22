@@ -111,7 +111,7 @@ def infer_one_img(net, img, config):
     fused_road_mask = (fused_road_mask * 255).to(torch.uint8).cpu().numpy()
     
     # Save before gamma
-    cv2.imwrite(os.path.join("D:\Kuliah\\bismillah-yudis-1\Tools\\ape\save\\mask", 'result_no_gamma.png'), fused_road_mask)
+    cv2.imwrite(os.path.join("/content/sam-road-ekstraksi-jaringan-jalan", "save", "mask", "result_no_gamma.png"), fused_road_mask)
     
     # # Gamma Correction
     gamma = float(args.gamma)  # Sesuaikan nilai gamma
@@ -262,14 +262,17 @@ if __name__ == "__main__":
     net.eval()
     net.to(device)
     
-    output_dir = 'D:\Kuliah\\bismillah-yudis-1\Tools\\ape\save'
-    
+    output_dir = os.path.join('/content', 'sam-road-ekstraksi-jaringan-jalan', 'save')
+    os.makedirs(output_dir, exist_ok=True)
+
     total_inference_seconds = 0.0
-    
+
     img_id = 'result'
+    
     print(f'Processing {img_id}')
     # [H, W, C] RGB
-    img = read_rgb_img('D:\Kuliah\\bismillah-yudis-1\Tools\\ape\input.png')
+    input_image_path = os.path.join('/content', 'sam-road-ekstraksi-jaringan-jalan', 'input.png')
+    img = read_rgb_img(input_image_path)
     start_seconds = time.time()
     # coords in (r, c)
     pred_nodes, pred_edges, itsc_mask, road_mask = infer_one_img(net, img, config)
