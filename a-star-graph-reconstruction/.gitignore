@@ -1,0 +1,5 @@
+.venv
+inferencer_spacenet
+save.p
+save.txt
+__pycache__

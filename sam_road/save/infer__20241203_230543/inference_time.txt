@@ -1,0 +1,1 @@
+Inference completed for config\toponet_vitb_256_spacenet.yaml in 58.03678250312805 seconds.

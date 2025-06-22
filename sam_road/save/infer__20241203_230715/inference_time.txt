@@ -1,0 +1,1 @@
+Inference completed for config\toponet_vitb_512_cityscale.yaml in 103.4750452041626 seconds.
