@@ -48,6 +48,9 @@ if uploaded_file is not None:
                 "--gamma", gamma_value,
             ]
             result = subprocess.run(command, capture_output=True, text=True)
+            if result.stderr:
+                st.error("Error Inference:")
+                st.error(result.stderr)
             
             if apply_astar == "Ya":
                 command = [
