@@ -4,7 +4,7 @@ DATASET: 'custom_data'
 NO_SAM: False
 
 SAM_VERSION: 'vit_b'
-SAM_CKPT_PATH: 'D:\\Kuliah\\bismillah-yudis-1\\Tools\\ape\\sam_road\\sam_ckpts\\sam_vit_b_01ec64.pth'
+SAM_CKPT_PATH: '/content/sam-road-ekstraksi-jaringan-jalan/sam_road/sam_ckpts/sam_vit_b_01ec64.pth'
 PATCH_SIZE: 512
 BATCH_SIZE: 16
 DATA_WORKER_NUM: 1
