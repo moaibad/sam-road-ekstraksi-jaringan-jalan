@@ -1,5 +1,5 @@
 import sys
-sys.path.append(r'D:\\Kuliah\\bismillah-yudis-1\\Tools\\ape\\a-star-graph-reconstruction\\roadtracer\\lib\\discoverlib')
+sys.path.append(r'/content/a-star-graph-reconstruction/roadtracer/lib/discoverlib')
 
 import geom
 import grid_index
