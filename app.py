@@ -43,7 +43,7 @@ if uploaded_file is not None:
             
             command = [
                 sys.executable, "sam_road\inferencer.py",
-                "--config", 'sam_road\config\\toponet_vitb_512_cityscale.yaml',
+                "--config", 'sam_road/config/toponet_vitb_512_cityscale.yaml',
                 "--checkpoint", 'sam_road\checkpoint\cityscale_vitb_512_e10.ckpt',
                 "--gamma", gamma_value,
             ]
@@ -51,7 +51,7 @@ if uploaded_file is not None:
             
             if apply_astar == "Ya":
                 command = [
-                    sys.executable, "a-star-graph-reconstruction\\astar.py",
+                    sys.executable, "a-star-graph-reconstruction/astar.py",
                     "--min_graph_distance", min_graph_dist,
                     "--max_straight_distance", max_straight_dist,
                 ]
